@@ -1,0 +1,19 @@
+@media (max-width: 900px) {
+    .login {
+        padding: 0;
+    }
+}
+@media (max-width: 400px) {
+    .header{
+        display:block ;
+        padding: 0;
+        .logo{
+            display: none;
+        }
+        article{
+            .btn{
+                padding: 0.5rem;
+            }
+        }
+    }
+}
