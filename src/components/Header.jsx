@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { Context, server } from '../index'
+import { Context} from '../index'
 import { toast } from 'react-hot-toast'
 import axios from 'axios'
 
@@ -10,7 +10,7 @@ const Header = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            const { data } = await axios.get(`${server}/users/logout`, 
+            const { data } = await axios.get(`${process.env.REACT_APP_SERVER}/users/logout`, 
             {
                 withCredentials: true
             })

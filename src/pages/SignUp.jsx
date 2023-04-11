@@ -1,7 +1,7 @@
 import React,{useContext, useState} from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import axios from 'axios'
-import {Context, server} from '../index'
+import {Context} from '../index'
 import { toast } from 'react-hot-toast'
 import Loader from '../components/Loader'
 const SignUp = () => {
@@ -13,7 +13,7 @@ const SignUp = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      const {data}= await axios.post(`${server}/users/signup`,{
+      const {data}= await axios.post(`${process.env.REACT_APP_SERVER}/users/signup`,{
         name,
         email,
         password
