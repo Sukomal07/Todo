@@ -24,7 +24,8 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: $color;
 }
 
-@mixin flexBox($direction: row,
+@mixin flexBox(
+    $direction: row,
     $alignItems: center,
     $justifyContent: flex-start,
     $spacing: 1rem) {
